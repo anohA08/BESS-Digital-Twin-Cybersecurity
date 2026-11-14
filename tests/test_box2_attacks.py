@@ -24,6 +24,9 @@ class Box2AttackTests(unittest.TestCase):
         self.assertAlmostEqual(minus.loc[65,'telemetry_soc_pct'],max(0,self.clean.loc[65,'soc_recorded_for_evaluation_only_pct']-5))
         ramp=inject_attack(self.clean,'spoof_ramp_p5')
         self.assertAlmostEqual(ramp.loc[40,'telemetry_soc_pct'],self.clean.loc[40,'soc_recorded_for_evaluation_only_pct'])
+    def test_positive_two_pp_spoof_regression(self):
+        plus=inject_attack(self.clean,'spoof_p2')
+        self.assertAlmostEqual(plus.loc[65,'telemetry_soc_pct'], min(100,self.clean.loc[65,'soc_recorded_for_evaluation_only_pct']+2))
     def test_replay_refreshes_timestamps(self):
         fixed=inject_attack(self.clean,'fixed_replay');rolling=inject_attack(self.clean,'rolling_replay')
         self.assertAlmostEqual(fixed.loc[66,'telemetry_soc_pct'],self.clean.loc[39,'soc_recorded_for_evaluation_only_pct'])

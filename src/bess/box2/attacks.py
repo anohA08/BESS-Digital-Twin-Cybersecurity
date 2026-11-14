@@ -59,9 +59,9 @@ def inject_attack(clean: pd.DataFrame, scenario: str, window: AttackWindow = Att
         if scenario == 'spoof_ramp_p5':
             offsets = np.linspace(0.0, 5.0, len(indices))
         elif scenario.startswith('spoof_m'):
-            offsets = -float(scenario.split('m',1)[1])
+            offsets = -float(scenario.removeprefix('spoof_m'))
         elif scenario.startswith('spoof_p'):
-            offsets = float(scenario.split('p',1)[1])
+            offsets = float(scenario.removeprefix('spoof_p'))
         else:
             offsets = float(scenario.split('_')[1])
         df.loc[indices,'telemetry_soc_pct'] = np.clip(
