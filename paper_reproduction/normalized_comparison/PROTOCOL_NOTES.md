@@ -1,0 +1,3 @@
+## Comparator scope
+
+Source-only duration-normalized time bins: the target current is known from the discharge schedule, and its scaling horizon is the median *source* maximum time from same-current sessions. This makes the bin assignment causal with respect to target measurements. The archived residual export has **identical recorded 151-minute extents for all 12 sessions**, so the often-cited different-discharge-duration argument does not describe this particular truncated dataset. The source-normalized baseline has ten fractional-time bins; the previous absolute baseline uses 10-minute bins, so both bin alignment and bin resolution change. All runs are same-cell, and no grid-scale physical validation is implied.

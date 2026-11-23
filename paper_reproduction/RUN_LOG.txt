@@ -1,0 +1,43 @@
+     method  mean_far    ci_lo    ci_hi  median_far  sessions_passing_5pct  n_sessions  max_far                                                                   note
+basic_cusum  0.055096 0.000000 0.136364    0.000000                     10          12 0.347107 Session resampling from one cell: descriptive, not cell generalization
+     global  0.038567 0.008264 0.076446    0.004132                      9          12 0.181818 Session resampling from one cell: descriptive, not cell generalization
+ soc_binned  0.019972 0.003444 0.042011    0.004132                     11          12 0.115702 Session resampling from one cell: descriptive, not cell generalization
+time_binned  0.019972 0.002755 0.044766    0.000000                     10          12 0.115702 Session resampling from one cell: descriptive, not cell generalization
+     method  attack  new_event_hits  n_sessions  mean_excess  median_delay_samples  mean_delay_samples  delay_denominator                                                                             note
+basic_cusum ramp_m5               3          12     0.035000                  41.0           43.000000                  3 Delay only for a new attack-window alarm not already present in paired clean run
+basic_cusum ramp_p5               0          12     0.000000                   NaN                 NaN                  0 Delay only for a new attack-window alarm not already present in paired clean run
+basic_cusum step_m5               4          12     0.113333                  33.0           33.000000                  4 Delay only for a new attack-window alarm not already present in paired clean run
+basic_cusum step_p5               4          12     0.126667                  28.0           31.000000                  4 Delay only for a new attack-window alarm not already present in paired clean run
+     global ramp_m5               8          12     0.136667                  36.5           35.000000                  8 Delay only for a new attack-window alarm not already present in paired clean run
+     global ramp_p5               0          12    -0.063333                   NaN                 NaN                  0 Delay only for a new attack-window alarm not already present in paired clean run
+     global step_m5               8          12     0.295000                  26.0           23.125000                  8 Delay only for a new attack-window alarm not already present in paired clean run
+     global step_p5               6          12     0.070000                   2.0            3.000000                  6 Delay only for a new attack-window alarm not already present in paired clean run
+ soc_binned ramp_m5              12          12     0.333333                  32.0           28.083333                 12 Delay only for a new attack-window alarm not already present in paired clean run
+ soc_binned ramp_p5               4          12     0.160000                  20.0           20.750000                  4 Delay only for a new attack-window alarm not already present in paired clean run
+ soc_binned step_m5              12          12     0.676667                   8.0           14.833333                 12 Delay only for a new attack-window alarm not already present in paired clean run
+ soc_binned step_p5              10          12     0.481667                   2.0            1.900000                 10 Delay only for a new attack-window alarm not already present in paired clean run
+time_binned ramp_m5               6          12     0.203333                  17.0           26.833333                  6 Delay only for a new attack-window alarm not already present in paired clean run
+time_binned ramp_p5               2          12     0.033333                   2.0            2.000000                  2 Delay only for a new attack-window alarm not already present in paired clean run
+time_binned step_m5               6          12     0.306667                   2.0           17.666667                  6 Delay only for a new attack-window alarm not already present in paired clean run
+time_binned step_p5               8          12     0.260000                   2.0            2.000000                  8 Delay only for a new attack-window alarm not already present in paired clean run
+Saved /mnt/data/BESS_SUBMISSION_CODE_REFINED/results
+
+CLEAN GATE
+                 method  mean_far  passing_sessions  max_far
+           basic_cusum  0.055096                10 0.347107
+                global  0.038567                 9 0.181818
+normalized_time_binned  0.024105                10 0.123967
+            soc_binned  0.019972                11 0.115702
+           time_binned  0.019972                10 0.115702
+
+PAIRED EVENT TEST
+  attack  soc_hits  normalized_time_hits  soc_only  time_only  both  neither  paired_exact_two_sided_p
+step_p5        10                     8         2          0     8        2                   0.50000
+step_m5        12                     6         6          0     6        0                   0.03125
+ramp_p5         4                     2         2          0     2        8                   0.50000
+ramp_m5        12                     6         6          0     6        0                   0.03125
+
+Saved: /mnt/data/BESS_SUBMISSION_CODE_REFINED/normalized_comparison
+
+PASS: validated data; complete reproducible frozen-protocol analysis
+Input SHA256: 83b73658d4c12dc4982dca45ba435c41be03b23673ecf4be99e5023dcbfa2316

@@ -1,0 +1,32 @@
+{
+  "capacity_ah": 5.039,
+  "max_voltage": 11.64,
+  "min_voltage": 9.285,
+  "nominal_voltage": 9.886,
+  "initial_soc": 100.0,
+  "final_soc": 11.0,
+  "soc_min": 10,
+  "soc_max": 100,
+  "charge_efficiency": 0.95,
+  "discharge_efficiency": 0.95,
+  "reference_dataset": "Average of all 2A discharge experiments",
+  "source": "URI-PBEST Experimental Battery Dataset",
+  "normal_voltage_calibration": {
+    "error_definition": "abs(measured_voltage - predicted_voltage)",
+    "condition_source": "discharge current level",
+    "conditions": {
+      "1A": {
+        "p95": 0.275489,
+        "p99": 0.278801
+      },
+      "1.5A": {
+        "p95": 0.227063,
+        "p99": 0.241087
+      },
+      "2A": {
+        "p95": 0.171894,
+        "p99": 0.188196
+      }
+    }
+  }
+}

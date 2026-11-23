@@ -1,0 +1,5 @@
+attack,soc_hits,normalized_time_hits,soc_only,time_only,both,neither,paired_exact_two_sided_p
+step_p5,10,8,2,0,8,2,0.5
+step_m5,12,6,6,0,6,0,0.03125
+ramp_p5,4,2,2,0,2,8,0.5
+ramp_m5,12,6,6,0,6,0,0.03125
